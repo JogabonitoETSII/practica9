@@ -31,9 +31,9 @@
       def get_date() # Método para la devolución de date.
         return @date
       end
-      #def <=> (other)
-     #    @author<=> other.author
-     # end  
+      def <=> (other)
+         @author<=> other.author
+      end  
     end
     
     class Libros < BReferences # Clase para el desarrollo de referencias bibliográficas. Herencia de References.

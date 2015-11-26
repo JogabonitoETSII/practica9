@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Bib::VERSION
   spec.authors       = ["alu0100734676"]
   spec.email         = ["alu0100734676@ull.edu.es"]
-#version 7 , 8 , 11
+#version 7 , 8 , 11 ,13 
   if spec.respond_to?(:metadata)
     spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
   end
@@ -26,8 +26,6 @@ Gem::Specification.new do |spec|
   
   spec.add_development_dependency "bundler", "~> 1.7.9"
   spec.add_development_dependency "bundler", "~>1.7.6"
-   spec.add_development_dependency "bundler", "~> 1.10.5"
-  
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 2.11"
   spec.add_development_dependency "guard"

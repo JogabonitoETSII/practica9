@@ -14,7 +14,7 @@
 #  $ ln -s config/Guardfile .
 #
 # and, you'll have to watch "config/Guardfile" instead of "Guardfile"
-
+#jajajajajajajaja ^^
 guard :bundler do
   require 'guard/bundler'
   require 'guard/bundler/verify'

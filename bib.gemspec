@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Bib::VERSION
   spec.authors       = ["alu0100734676"]
   spec.email         = ["alu0100734676@ull.edu.es"]
-#version 7 
+#version 7 , 8
   if spec.respond_to?(:metadata)
     spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
   end

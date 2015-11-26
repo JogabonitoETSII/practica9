@@ -81,7 +81,7 @@ describe "Pruebas para una lista con nodos simples" do
             @doublelist.insert(10)
             expect(@doublelist.detect {|x| x == 20}).to eq(20)
             expect(@doublelist.find {|x| x == 40}).to eq(40)
-            expect(@doublelist.detect {|x| x.between?(20,40)}).to eq(20)
+            expect(@doublelist.detect {|x| x.between?(20,40)}).to eq(30)
         end
         it "Comprobando el método drop" do
             @doublelist.insert(40)

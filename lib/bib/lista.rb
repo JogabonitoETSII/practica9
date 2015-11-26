@@ -43,13 +43,14 @@ Node1 = Struct.new(:prev, :value, :next) # Definimos la estructura del nodo
       def empty? # Método para comprobar si la lista está vacía.
         @head == nil
       end
-     # def each
-      #   attr_accessor :aux , :aux2
-       #  @aux =@head;
-        #  while @aux != @tail do
-         #    yield @aux.value 
+      
+      #def each
+       #  attr_accessor :aux , :aux2
+        # @aux =@head;
+         # while @aux != @tail do
+          #   yield @aux.value 
            #   @aux=@aux.next
-        #  end
-         # true;
+          ##end
+          #true;
       #end
 end

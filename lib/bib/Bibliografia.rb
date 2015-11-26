@@ -32,8 +32,8 @@
         return @date
       end
       #def <=> (other)
-       #  @author<=> other.author
-      #end  
+     #    @author<=> other.author
+     # end  
     end
     
     class Libros < BReferences # Clase para el desarrollo de referencias bibliográficas. Herencia de References.

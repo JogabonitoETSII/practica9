@@ -2,7 +2,7 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'bib/version'
-#version 3 9 10 1111
+#version 3 9 10
 Gem::Specification.new do |spec|
   spec.name          = "bib"
   spec.version       = Bib::VERSION
@@ -25,6 +25,7 @@ Gem::Specification.new do |spec|
   
   
   spec.add_development_dependency "bundler", "~>1.7.9"
+  spec.add_development_dependency "bundler", "~>1.7.6"
   
   #spec.add_development_dependency "bundler", "~>1.10.5"
   spec.add_development_dependency "rake", "~> 10.0"

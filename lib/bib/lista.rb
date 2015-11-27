@@ -1,7 +1,7 @@
 Node1 = Struct.new(:prev, :value, :next) # Definimos la estructura del nodo
-    include Enumerable
-    class Double_List # Clase para el desarrollo de una lista doblemente enlazada.
     
+    class Double_List # Clase para el desarrollo de una lista doblemente enlazada.
+    include Enumerable
       attr_accessor :head, :tail
     
       #-----> MÉTODOS DE LA CLASE.

@@ -38,10 +38,8 @@ describe BReferences do
     it "Probando el tipo" do
       expect(@electronic_document.respond_to? :issn).to eq(false)
     end
-    it "Comparando Las clases" do
-        expect(bibliography.<(otro)).equal to (-1)
-        expect(bibliography.>(otro)).equal to (1)
-        expect(bibliography.==(otro)).equal to (0)
+    it "Comparando ==" do
+        expect(@bibliography<@otro).to eq (false)
     end
   end
 end

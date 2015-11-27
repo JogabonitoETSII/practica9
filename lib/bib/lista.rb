@@ -1,5 +1,5 @@
 Node1 = Struct.new(:prev, :value, :next) # Definimos la estructura del nodo
-
+    include Enumerable
     class Double_List # Clase para el desarrollo de una lista doblemente enlazada.
     
       attr_accessor :head, :tail
@@ -45,9 +45,8 @@ Node1 = Struct.new(:prev, :value, :next) # Definimos la estructura del nodo
       end
       
       def each
-         attr_accessor :aux , :aux2
          @aux =@head;
-          while @aux != @tail do
+          while @aux != nil do
              yield @aux.value 
               @aux=@aux.next
           end

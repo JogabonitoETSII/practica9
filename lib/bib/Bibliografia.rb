@@ -1,6 +1,6 @@
     class BReferences # Clase para el desarrollo de referencias.
-    
-      attr_accessor :author, :title, :editorial, :date
+      include Comparable
+      attr_reader :author, :title, :editorial, :date
     
       #-----> MÉTODOS ELEMENTALES DE LA CLASE.
     
@@ -14,25 +14,12 @@
       
       end
       
-      #-----> MÉTODOS GETTERS DE LA CLASE.
-      
-      def get_author() # Método para la devolución de author.
-        return @author
+      def to_s
+      "#{@autores.join(",")}\n#{@titulo}\n#{@fecha}"
       end
       
-      def get_title() # Método para la devolución de title.
-        return @title
-      end
-      
-      def get_editorial() # Método para la devolución de editorial.
-        return @editorial
-      end
-      
-      def get_date() # Método para la devolución de date.
-        return @date
-      end
       def <=> (other)
-         @author<=> other.author
+         author<=> other.author
       end  
     end
     

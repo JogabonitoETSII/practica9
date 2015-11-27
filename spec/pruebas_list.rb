@@ -4,8 +4,7 @@ require 'bib/Bibliografia'
 #version4
 describe "Pruebas para una lista con nodos simples" do
     before :each do
-        @doublelist = Double_List.new(nil,nil,nil)
-        @doublelist1 = Double_List.new(nil,10,nil)
+        @doublelist = Double_List.new(nil,nil)
     end
     
     describe "Prueba para comprobar el funcionamiento de los nodos" do
@@ -24,14 +23,14 @@ describe "Pruebas para una lista con nodos simples" do
 
         it "Se puede insertar un elemento en la lista" do
             @doublelist.insert(10)
-            expect(@doublelist.firts.value).to eq(10)
+            expect(@doublelist.head.value).to eq(10)
         end
         
         it "Se puede insertar varios elementos en la lista" do
             @doublelist.insert(10)
             @doublelist.insert(20)
-            expect(@doublelist.firts.value).to eq(20)
-            expect(@doublelist.firts.next.value).to eq(10)
+            expect(@doublelist.head.value).to eq(20)
+            expect(@doublelist.head.next.value).to eq(10)
         end
         
         it "Se puede extraer un elemento de la lista" do
@@ -53,11 +52,9 @@ describe "Pruebas para una lista con nodos simples" do
             @doublelist.insert(20)
             @doublelist.insert(30)
             expect(@doublelist.empty?).to eq(false)
-            expect(@doublelist.firts.value).to eq(30)
-            expect(@doublelist.firts.next.value).to eq(20)
-            expect(@doublelist.last.prev.value).to eq(20)
-            expect(@doublelist.last.value).to eq(10)
-            expect(@doublelist.last.next).to eq(nil)
+            expect(@doublelist.head.value).to eq(30)
+            expect(@doublelist.head.next.value).to eq(20)
+           
         end
     end
     
@@ -65,15 +62,15 @@ describe "Pruebas para una lista con nodos simples" do
         it "Se puede recorrer la lista de izquierda a derecha" do
             @doublelist.insert(10)
             @doublelist.insert(20)
-            expect(@doublelist.firts.value).to eq(20)
-            expect(@doublelist.firts.next.value).to eq(10)
+            expect(@doublelist.head.value).to eq(20)
+            expect(@doublelist.head.next.value).to eq(10)
         end
         
         it "Se puede recorrer la lista de derecha a izquierda" do
-            @doublelist.insert(10)
             @doublelist.insert(20)
-            expect(@doublelist.last.value).to eq(10)
-            expect(@doublelist.last.prev.value).to eq(20)
+            @doublelist.insert(10)
+            expect(@doublelist.head.value).to eq(10)
+           
         end
              it "Comprobando el método detect" do
             @doublelist.insert(40)
@@ -82,7 +79,7 @@ describe "Pruebas para una lista con nodos simples" do
             @doublelist.insert(10)
             expect(@doublelist.detect {|x| x == 20}).to eq(20)
             expect(@doublelist.find {|x| x == 40}).to eq(40)
-            expect(@doublelist.detect {|x| x.between?(20,40)}).to eq(30)
+            expect(@doublelist.detect {|x| x.between?(20,40)}).to eq(20)
         end
         it "Comprobando el método drop" do
             @doublelist.insert(40)
@@ -92,12 +89,11 @@ describe "Pruebas para una lista con nodos simples" do
             expect(@doublelist.drop(2)).to eq([30, 40])
         end
         it "Comprobando el método max" do
-            @doublelist.insert(5)
             @doublelist.insert(4)
             @doublelist.insert(3)
             @doublelist.insert(2)
             @doublelist.insert(1)
-            expect(@doublelist.max).to eq(5)
+            expect(@doublelist.max).to eq(4)
         end
         it "Comprobando el método min" do
             @doublelist.insert(5)
